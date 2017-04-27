@@ -13,8 +13,36 @@
     tools:context="developer.test.com.androiddevelopertest.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <LinearLayout
+        android:id="@+id/inputSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/userInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_for" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search" />
+
+    </LinearLayout>
+
     <ListView
         android:id="@+id/listView"
+        android:layout_below="@id/inputSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
